@@ -31,6 +31,14 @@
 #include <MQTTSNClient.h>
 #include <MQTTmbed.h> // Countdown
 
+
+#ifndef MBED_CONF_MBED_MQTT_MAX_PACKET_SIZE
+#define MBED_CONF_MBED_MQTT_MAX_PACKET_SIZE 200
+#endif
+#ifndef MBED_CONF_MBED_MQTT_MAX_CONNECTIONS
+#define MBED_CONF_MBED_MQTT_MAX_CONNECTIONS 5
+#endif
+
 /**
  * @brief Implementation of the Network class template parameter of MQTTClient.
  */
